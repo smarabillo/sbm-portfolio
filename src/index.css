@@ -1,0 +1,93 @@
+@import "flowbite/dist/flowbite.min.css";
+@import "tailwindcss-animated";
+@import "tailwindcss";
+
+/* ---------------------------------- Fonts */
+@font-face {
+  font-family: "TTNormsPro";
+  font-weight: 700;
+  src: url("/assets/fonts/TTNorms-Pro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TTNormsPro";
+  font-weight: 600;
+  src: url("/assets/fonts/TTNorms-Pro-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TTNormsPro";
+  font-weight: 500;
+  src: url("/assets/fonts/TTNorms-Pro-Normal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TTNormsPro";
+  font-weight: 400;
+  src: url("/assets/fonts/TTNorms-Pro-Light.ttf") format("truetype");
+}
+
+/* ---------------------------------- Root */
+:root {
+  --color-primary: #0029de;
+  --color-secondary: #c2cdd5;
+  --color-light: #f3f3f3;
+}
+
+/* ---------------------------------- Layouts */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "TTNormsPro", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(15, 38, 99);
+  color: var(--color-light);
+}
+
+
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  font-family: "TTNormsPro", sans-serif;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  border: 1px solid #ececec;
+}
+
+.card-project{
+  @apply rounded-4xl md:w-[400px] w-[350px] h-[500px] bg-gradient-to-b from-blue-900  to-blue-500 overflow-hidden border border-blue-400 shadow-2xl p-8 hover:transform hover:scale-103 transition-all ease-in-out duration-1000;
+}
+
+.elevate {
+  @apply hover:shadow-[0_0px_30px_6px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.03)] transform hover:scale-101;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-250px * 3)); /* Moves by 3 slides */
+  }
+}
+
+.slide-track {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  width: calc(250px * 9); 
+  animation: infinite-scroll 20s linear infinite;
+}
+
