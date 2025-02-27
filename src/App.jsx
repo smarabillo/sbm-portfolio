@@ -17,6 +17,7 @@ function App() {
           path="/"
           element={
             <>
+              <Navbar />
               <Hero />
               <Services />
               <Contact />

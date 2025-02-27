@@ -1,5 +1,4 @@
 import {ArrowUpRight} from "lucide-react";
-impor
 
 const Navbar = () => {
   return (
